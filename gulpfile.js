@@ -22,7 +22,6 @@ gulp.task('scripts', function () {
         'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/jquery-migrate/jquery-migrate.min.js',
         'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/wow/dist/wow.min.js',
         'app/libs/parallax.js/parallax.js',
         'app/libs/tilt.js/dest/tilt.jquery.min.js',
         'app/libs/equalheights/equalheights.js',

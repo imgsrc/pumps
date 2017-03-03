@@ -2,10 +2,8 @@ $(function () {
 
     //parallax
     $(".s-features").parallax({
-        imageSrc: './img/bg2.jpg'
+        imageSrc: './img/bg3.jpg'
     });
-
-
 
     //EqualHeight
     // $(".item-text").equalHeights();
