@@ -46,18 +46,22 @@
       margin-top: 30px
       margin-bottom: 40px
     .portfolio
-      .col-md-4
+      .col-md-3
         padding: 8px 8px
+      h3
+        font-size: em(24px)
+        text-shadow: 0 5px 10px rgba($color, .5)
       &-item
         box-shadow: 0 5px 10px rgba($color, .5)
         position: relative
         display: block
+        margin: 20px 0
         overflow: hidden
         +mt(.5s)
         img
           +mt(.5s)
-          width: 390px
-          height: 266px
+          width: 360px
+          height: 181px
           object-fit: cover
           display: block
         &:hover
@@ -69,7 +73,7 @@
         &-cont
           position: absolute
           color: $color
-          padding: 30% 15px 0
+          padding: 20% 15px 0
           top: 0
           left: 0
           width: 100%
@@ -86,13 +90,12 @@
             margin-top: 20px
             font-size: em(26px)
           .fa
-            color: rgba($color, .8)
-            font-size: 24px
-    .text-center
-      h4
-        margin-top: 50px
-        a
-          color: $blue
+            color: rgba($color, .5)
+            font-size: 48px
+      .button
+        box-shadow: 0 5px 10px rgba($color, .4)
+        margin-bottom: 30px
+
 .portfolio-popup
   position: relative
   background-color: #fff
@@ -177,6 +180,7 @@
     text-transform: none
   h4
     text-transform: none
+
 .form
   outline: rgba($white,.2) solid 10px
   display: block
@@ -236,6 +240,7 @@
 
 .form.form-callback
   background-color: rgba($white, .1)
+  max-width: 320px
   h4
     margin-bottom: 30px
   input
