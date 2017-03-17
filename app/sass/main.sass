@@ -1,8 +1,9 @@
+$output-bourbon-deprecation-warnings: false !default
 @import ../../bourbon/bourbon
-@import fonts
-@import libs
-@import vars
-@import settings
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "settings"
 
 .main-head
   color: $white
@@ -24,6 +25,8 @@
       p
         font-family: "OpenSansSemiBold", sans-serif
         font-size: em(18px)
+      span
+        font-size: em(16px)
     .top-phone
       p
         line-height: 1.5
@@ -42,17 +45,25 @@
   .header-content
     margin-top: 40px
     margin-bottom: 60px
+    h1
+      text-shadow: 0 10px 10px rgba($blue, .5)
     h2
       margin-top: 30px
       margin-bottom: 40px
     .portfolio
       .col-md-3
         padding: 8px 8px
-      h3
-        font-size: em(24px)
-        text-shadow: 0 5px 10px rgba($color, .5)
       &-item
-        box-shadow: 0 5px 10px rgba($color, .5)
+        a
+          text-decoration: none
+          outline: none
+        text-align: center
+        padding: 10px 0
+        h3
+          font-size: em(24px)
+          color: $white
+          text-shadow: 0 3px 3px rgba($color, .5)
+        box-shadow: 0 15px 15px rgba($color, .5)
         position: relative
         display: block
         margin: 20px 0
@@ -61,8 +72,8 @@
         img
           +mt(.5s)
           width: 360px
-          height: 181px
-          object-fit: cover
+          height: 200px
+          object-fit: contain
           display: block
         &:hover
           .portfolio-item-cont
@@ -77,7 +88,7 @@
           top: 0
           left: 0
           width: 100%
-          height: 100%
+          height: 905%
           background-color: rgba($white, .70)
           text-align: center
           opacity: 0
@@ -97,21 +108,32 @@
         margin-bottom: 30px
 
 .portfolio-popup
+  img
+    object-fit: cover
+    display: block
   position: relative
   background-color: #fff
   display: block
-  max-width: 600px
+  max-width: 700px
   margin: 3% auto
   text-align: center
   padding-top: 15px
+  .list
+    margin-bottom: 20px
+    li
+      text-align: left
+
   +mt(.25s)
   .row, .col-sm-12
     display: block
   h2
     line-height: em(21px)
-    margin: 20px auto 10px
+    margin: 20px auto 0
     width: 70%
   &-text
+    h3, h4
+      color: $accent
+      margin-bottom: 12px
     display: block
     width: 90%
     margin: 10px auto 40px
@@ -124,7 +146,6 @@
       font-size: 20px
       margin-left: 3px
       color: $accent
-
 
 .s-features
   color: $white
@@ -150,7 +171,6 @@
       .item-text
         color: $accent
 
-
 .s-about
   background-color: lighten($accent, 10%)
   color: rgba($white, .8)
@@ -161,7 +181,7 @@
         content: '\f063'
         left: 48%
         top: 200px
-        font-family: "FontAwesome"
+        font-family: "FontAwesome", sans-serif
         font-size: 60px
         color: darken($accent, 20%)
     .s-about-item
@@ -175,6 +195,7 @@
   background-color: darken($accent, 20%)
   color: $white
   padding: 110px 0 0
+
 .director
   h3
     text-transform: none
@@ -182,7 +203,7 @@
     text-transform: none
 
 .form
-  outline: rgba($white,.2) solid 10px
+  outline: rgba($white, .2) solid 10px
   display: block
   padding: 20px 30px
   border: 1px solid rgba($accent, 20%)
@@ -224,8 +245,6 @@
     color: rgba($white, .7)
   .text-right
     display: block
-    +media-xs(down)
-      text-align: right
     .bottom-phone
       display: block
       font-family: "Exo2Bold", sans-serif
@@ -236,7 +255,6 @@
   .fa
     color: rgba($white, .4)
     margin-right: 5px
-
 
 .form.form-callback
   background-color: rgba($white, .1)
@@ -256,7 +274,7 @@
   margin-left: -670px
   max-width: 1340px
   padding: 30px
-  background-color: rgba($white,.3)
+  background-color: rgba($white, .3)
 
 .popup-form-map
   button.mfp-close

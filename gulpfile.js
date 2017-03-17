@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     bourbon = require('node-bourbon'),
     ftp = require('vinyl-ftp'),
 	gcmq = require('gulp-group-css-media-queries'),
+    sassUnicode = require('gulp-sass-unicode'),
     notify = require("gulp-notify");
 
 // Скрипты проекта
@@ -48,6 +49,7 @@ gulp.task('sass', function () {
         .pipe(sass({
             includePaths: bourbon.includePaths
         }).on("error", notify.onError()))
+        .pipe(sassUnicode())
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer(['last 5 versions']))
 		.pipe(gcmq())
